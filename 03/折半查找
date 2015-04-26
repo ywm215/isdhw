@@ -1,0 +1,24 @@
+#!/usr/bin/python
+import sys
+def sercher(y):
+numgroup=[1,4,5,7,8,9,13,19,20]
+low=0
+high=len(numgroup)-1
+#mid=(low+high)/2
+while(low<high):
+   mid=(low+high)/2
+   print "the mid is",mid
+   print "the mid value is",numgroup[mid]
+   guess=numgroup[mid]
+   if guess == y:
+    print "the number you want is",mid
+    print "one"
+   elif guess > y:
+    high=mid-1
+    print "two"
+   else:
+    low=mid+1
+    print "three"
+else:
+  print "not found"
+  sercher(int(sys.argv[1]))
